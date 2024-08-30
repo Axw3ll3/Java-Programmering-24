@@ -6,14 +6,22 @@ public class JavaPlayground {
     
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
     
         System.out.println("Hej och välkommen till denna simulation");
-    System.out.println("Idag ska vi ta reda på om du är tillräckligt gammal för att kunna delta i denna övning");
+        System.out.println("Idag ska vi ta reda på om du är tillräckligt gammal för att kunna delta i denna övning");
 
-    int age = sc.nextInt();
+        System.out.println("Var snäll och skriv in din ålder!");
+        int age = sc.nextInt();
 
+        if (age >= 18) {
+            System.out.println("Du är godkänd");
+        }
 
+        else if (age < 18) {
+            System.out.println("Du är för ung för denna övning");
+        }
+        sc.close();
     }
     
 }
