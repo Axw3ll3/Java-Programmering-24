@@ -62,10 +62,93 @@ public class E1 {
         // (4*4 == 16) ^ (6-2==4); stämmer inte efters om "^" tecknet bidrar till att man vill ha true på ena sidan och false på andra, vilket inte stämmer i detta scenario
     
         
-        
+        //1.6 extra
+        // int studentCount = "twenty"; funkar inte då "twenty" inte är ett numerärt värdet utan "String värde"
+        // boolean isRaining = ture; funkar eftersom man sätter boolen "isRaining"'s värde till true
+        // double piValue = 3.14159; funkar då värdet är inom rätt spann av antal siffror
+        // char courseCode = 1024; funkar inte då 1024 är ett nummer och inte en character
+        // String myAge = "25"; funkar inte då 25 är fel input type
+        // int roomNumber = 'A'; funkar inte då 'A' är en char och inte en integer
+        // boolean hasPassed = "yes"; funkar ej då "yes" inte är ett true/false statement
+        // float temperature = 98.6; funkar ej då de måste markeras med ett F i slutet för att visa de är en float"
+        // byte numberOfSeats = 200; funkar inte då det är utanför bytes "radius"
+        //char grade = 65; funkar då 65 är motsvarande ett litet "a" i alfabetet.
+        // String userName = 'John'; = Funkar ej då namnet "John" är omgivet av fel täcken.
+        // boolean isActive = 1; funkar ej då "1" inte är ett true eller false värde
+        // int employeeSalary = 50000.50; funkar inte då det är ett decimaltal
+        //double piConstant = 3.14; funkar eftersom 3.14 är inom doubles "ramverk"
+        //char initial = "M"; funkar ej då det är fel parametrar runt om "M"
+        //boolean isTrue = true; funkar då du sätter boolens värde till true.
+        //byte numberOfPages = 3000L; funkar ej, bortom bytes ramverk samt "L" i slutet skapar problem
+        //float distance = 10.5F; funkar då 10.5 är inom float's ramverk medan float ignorerar det stora "F":et
+        //String firstName = "Alice" + "Bob"; funkar då både räknas som en String, plus tecknet bidrar endast till att orden blir ihopskrivna
+        //char lastCharacter = "Hello".charAt(4); Funkar, bidrar till att ett litet "o" skrivs ut då det (antagligen) är denna bokstav på definierad plats
+
+        //1.9 extra
+        // 15/3; bidrar till svar 5
+        // 8-(5+2); bidrar till svar 1
+        // 4*(6-3); svaret blir 12
+        // 7+3*2-1; svaret blir 12
+        // 5*3+4/2; svar blir 17
+        // 10%3; svar blir 1
+        // (5+3)/2; svar blir 4
+        // 6+4-2*3; svar blir 4
+        // 9%2 == 0; svar blir false
+        // 8>=7 && 3!=4; svar blir true
+        // !(6<10) || (5>7 && 2 == 2); svar blir false 
+        // 'A'==65 && 'B'!= 66; blir false
+        // (3+2)*(8/4) == 10; blir false
+        // 4*3-2+8/4 != 4; blir true
+        // "apple" == "apple"; blir true
+        // "apple" != "banana"; blir true
+        // 5>4 || 3<2&&1==1; blir true 
+        // true && false || true; blir true;
+        // false ^ true && true; blir true då de ena stämmer och andra inte (vilket ^ tecknet syftar på)
+        // false || true && false; blir false
+
+
+        //1.10
+        int a = 10, b = 20, c = 30;
+        int average = (a+b+c)/3;
+        System.out.println("The average is: " +average);
+
+        //1.11
+        boolean isRaining = true, isCold = false;
+
+        String a = "Go outside", b = "Stay inside";
+        String condition = (isRaining == isCold)?b:a;
+ 
     
+        System.out.println(condition);
+
+        //1.12
+        String firstName = "Axel";
+        String lastName = "Hagelberg Strid";
+        String fullName = firstName + lastName;
+        int length = fullName.length();
+        System.out.println("Full name: " +fullName+ " Length: " +length);
+
+
+
+        //1.13
+            int x = 15, y = 4;
+            int quotient=x+y;
+            int remainder=x%y;
+            System.out.println("Quotient: " +quotient+ " Remainder: " + remainder);
     
-    
-    
-    }
+
+        //1.14
+            int value = 15;
+            int remainder = value%2;
+
+            if (remainder == 0) {
+                System.out.println("The number is even");
+            }
+
+            else if (remainder != 0) {
+                System.out.println("The number is odd");
+            }
+
+
+        }
 }
