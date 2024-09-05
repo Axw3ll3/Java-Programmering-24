@@ -1,0 +1,12 @@
+public class E1 {
+    public static void main(String[] args) {
+        
+        type = "a";
+
+        int myAge;
+        myAge = 21;
+        
+        System.out.println(a);
+
+    }
+}
