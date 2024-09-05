@@ -29,5 +29,43 @@ public class E1 {
         double gravitationalForce = 9.82;
         // byte screenResolutionX = 1024; Funkar inte då talet är för stort
         // char smileyFace = '/u263a'; Funkar inte då de är mer än en "character"
+
+
+        //1.7
+        Ship calypso = new Ship();   //Nytt objekt
+        System.out.println(calypso); //Värdet som kommer ut här är objektets referensvärde
+
+        Ship saoGabriel = calypso;
+        System.out.println(saoGabriel); //Värdet som kommer ut är ett referensvärde baserat på calypso, ingen kopia av objektet men en kopia av referensen till objektet calypso är baserat/refererat på
+
+        //1.8
+        int x = 8, y = 24;
+
+        int x = 4;
+        short y = 12;
+        // Allt här fungerar som de ska
+
+
+        //1.9
+
+        // 6+11 ska bli 17
+        // 8+(14-11) ska bli 11
+        // 9*6+2 ska bli 56
+        // 8<400 är true då 400 är större än 8
+        // 12 == 7+4 är false då 7+4 endast är 11 vilket inte är lika med 12
+        // 9*9+4 > 80 stämmer då 9*9 är 81 + 4 är 85, vilket är större än 80
+        // "costeaue" != "daGama" stämmer då dessa variablar inte är lika
+        // 'f' < 'a'; är falsk eftersom a's position i alfabetet är mindre än f's och inte tvärtom
+        // (4+3 == 7) && (4-3 == 1); stämmer då både påståenden kring "&&" täcknen är sanna
+        // (4+3 == 7) && ('j' > 'p'); stämmer inte då j's plats i alfabetet (antalsmässigt) inte är större än p's vilket bidrar till att båda sidor inte är sanna
+        // (800-200 <= 600); stämmer eftersom 800-200 är lika med 600, vilket stämmer överens med jämförelsetecknet som visar mindre eller lika med
+        // (4*4 == 16) ^ (6-2==4); stämmer inte efters om "^" tecknet bidrar till att man vill ha true på ena sidan och false på andra, vilket inte stämmer i detta scenario
+    
+        
+        
+    
+    
+    
+    
     }
 }
