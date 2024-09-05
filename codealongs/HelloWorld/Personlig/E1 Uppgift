@@ -1,12 +1,14 @@
 public class E1 {
     public static void main(String[] args) {
         
-        type = "a";
 
         int myAge;
         myAge = 21;
         
-        System.out.println(a);
+        String = myFirstName;
+        myFirstName = "Axel";
+
+        System.out.println("Mitt namn är " + myFirstName + "och jag är " +myAge+ "år gammal");
 
     }
 }
