@@ -1,13 +1,33 @@
 public class E1 {
     public static void main(String[] args) {
         
-
+        // 1.1 - 1.3
         int myAge = 21;
 
         
         String myFirstName = "Axel";
 
         System.out.println("Mitt namn är " + myFirstName + "och jag är " +myAge+ "år gammal");
+        
+        // 1.4
+        boolean = true;
 
+        // 1.5
+        int x = 256; 
+        byte y = 8;
+        /*Funkar att stoppa in byte i en integer då integer tillåter större tal men inte åt andra hållet då en byte inte tillåter så stort värde */
+
+
+        // 1.6
+        int numberOfStudents = 23;
+        char classroomIdentifier = 'B';
+        // int backgroundColor = "blue"; Funkar inte då inte lagrar tal och inte "ord"
+        // boolean above50%; Funkar inte eftersom bool inte tar emot % tecken
+        // boolean isNative = 0; Funkar inte eftersom bool kräver ett false/true statement 
+        String exampleString = "This is an example string";
+        // int gravitationalForce = 9.82; Funkar inte då det är ett decimaltal
+        double gravitationalForce = 9.82;
+        // byte screenResolutionX = 1024; Funkar inte då talet är för stort
+        // char smileyFace = '/u263a'; Funkar inte då de är mer än en "character"
     }
 }
