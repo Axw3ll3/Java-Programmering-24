@@ -138,6 +138,7 @@ public class E1 {
     
 
         //1.14
+        {
             int value = 15;
             int remainder = value%2;
 
@@ -148,7 +149,59 @@ public class E1 {
             else if (remainder != 0) {
                 System.out.println("The number is odd");
             }
+       }   
+
+       //1.15
+       {
+       String sentence = "I'm the man of the hour";
+
+       int index = sentence.indexOf("the", 1);
+
+       if (index >= 1) {
+       System.out.println("The word 'the' was found at the index: " +index);
+         }
+
+        else {
+            System.out.println("The word 'the' wasn't found");
+        }
 
 
         }
+
+       //1.15 (part 2)
+       {
+        String sentence = "I'm the man of the hour as a pear";
+ 
+        int index = sentence.indexOf("a", 1);
+ 
+        if (index >= 1) {
+        System.out.println("The word 'a' was found at the index: " +index);
+          }
+ 
+         else {
+             System.out.println("The word 'a' wasn't found");
+         }
+ 
+         }
+        
+         //1.16
+         int a=15, b=12, c=17;
+         int placeHolder;
+
+         System.out.println("Initiala värdet av a: " +a+ " b: " +b+ " c: " +c)
+
+         placeHolder=a;
+         a=b;
+         b=c;
+         c=placeHolder;
+
+         System.out.println("Nya värdet av a: " +a+ " Värdet av b" + b + " Värdet av c: "+ c);
+
+
+        //1.17
+        int n = 20;
+        int placeHolder = 1;
+
+        
+
 }
