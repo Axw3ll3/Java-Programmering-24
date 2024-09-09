@@ -1,6 +1,21 @@
 public static class E2 {
     public static void main(String[] args) {
-        //2.1
+        //2.1 
+        /*Svaret på första blir 11 eftersom x<y vilket gör att dessa två tal adderas
+          Svaret på andra blir 12 då x inte är lika med y, vilket gör att ys värde blir x gamla värde
+          Svaret blir att y = 1; då y är större än x.
+        */
+
+        //2.2
+        /* Svaret på först blir 10
+            Svaret på andra blir 50
+            Svaret på tredje blir 80
+            Svaret på fjärde blir 112
+            Svaret på femte blir 18
+         */
+
+         //2.3
+         
 
 
     }
