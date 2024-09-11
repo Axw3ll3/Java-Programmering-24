@@ -58,8 +58,35 @@ public static class E2 {
                 System.out.println("The sum of the first 10 odd numbers: " + sum);
             }
           }
+          */
+            //2.1 extra
+            /*
+             a = a+b; --> a=15, b=10;
+             p = q-p; --> p=5, q=20;
+             m = m*n; --> m=48, n=6;
+             j = j/i; --> i=4, j=3;
+             c = c/d; --> c=3, d=2;
+             f = f-e; --> e=25, f=5;
+             */
 
+             //2.2 extra
+             /*
+              Första är 27;
+              Andra är 155;
+              ... 693;
+              ... 5;
+              ... 105;
+              ... 30;
+              */
 
-            */
+              //2.3 extra
+              /*
+               Första blir 25;
+               Andra blir 10;:
+               ... 18;
+               ... 27;
+               ... 55;
+               */
+
     }
 }
