@@ -20,6 +20,46 @@ public static class E2 {
           */
 
           //2.4
+          /*
+           * public class PrintNumbersForLoop {
+                public static void main(String[] args) {
+                for (int i = 1; i<=10; i++) {
+                    System.out.println(i);
+                  }
+                }
+            }
+             
+              public class MultiplicationTableForLoop {
+                public static void main(String[] args) {
+                  int number = 5;
+                  for (int i =1; 1<=10; i++); {
+                    System.out.println(number + " * " + i + " = " (number * i));
+                 }
+                }
+              }
 
+            public  class CountdownWhileLoop {
+              public static void main(String[] args) {
+              int count = 10;
+                while (count >= 1) {
+                  System.out.println(count);
+                  count--;
+                }
+              }
+            }
+              
+
+          public class SumOfOddNumbersForLoop {
+            public static void main(String[] args) {
+              int sum = 0;
+              for (int i =1; i<=19; i+=2) {
+                sum += i;
+              }    
+                System.out.println("The sum of the first 10 odd numbers: " + sum);
+            }
+          }
+
+
+            */
     }
 }
