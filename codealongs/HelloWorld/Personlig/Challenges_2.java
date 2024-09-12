@@ -84,10 +84,10 @@ public class Challenges_2 {
         Scanner sc = getScanner();
         System.out.println("Please write a string");
         String savedString = sc.nextLine();
-        System.out.println("Please write the letter you want to search for: ");;
+        System.out.println("Please write the letter you want to search for: ");
         char C = sc.nextLine().charAt(0);
         checkCharInString(savedString, C);
-        System.out.println("The letter " +C+ " was found " ));
+        System.out.println("The letter " +C+ " was found " +checkCharInString(savedString, C)+ " amount of times");
     }
 
     public int checkNumber(Scanner sc) {
