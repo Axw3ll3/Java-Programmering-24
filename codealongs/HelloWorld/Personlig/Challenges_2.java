@@ -87,7 +87,7 @@ public class Challenges_2 {
         System.out.println("Please write the letter you want to search for: ");;
         char C = sc.nextLine().charAt(0);
         checkCharInString(savedString, C);
-        System.out.println(checkCharInString(savedString, C));
+        System.out.println("The letter " +C+ " was found " ));
     }
 
     public int checkNumber(Scanner sc) {
@@ -109,8 +109,15 @@ public class Challenges_2 {
     }
 
     public int checkCharInString(String savedString, char C) {
-
-
+    int count = 0;
+    
+    for(int i=0; i<savedString.length(); i++) {
+        if (savedString.charAt(i) == C);
+            count++;
+        }
+        return count;
     }
+   
+
     
 }
