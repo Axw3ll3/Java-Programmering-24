@@ -41,6 +41,7 @@ public class Challenges_2 {
                 case 3:
 
                 System.out.println("You choose option 3");
+                    mirrorString();
                     break; 
                 case 4:
                 
@@ -90,6 +91,25 @@ public class Challenges_2 {
         System.out.println("The letter " +C+ " was found " +checkCharInString(savedString, C)+ " amount of times");
     }
 
+
+    public String mirrorString() {
+        Scanner sc = getScanner();
+        System.out.println("Write the word you want to mirror: ");
+        String word = sc.nextLine();
+        System.out.println("Mirroring word...");
+        
+        String noString = "";
+        char characters;
+
+        for (int i=0; i<word.length(); i++) {
+            characters=word.charAt(i);
+            noString = characters+noString;
+        }
+        
+        System.out.println("The mirrored word is: " +noString);
+        return noString;
+    }
+
     public int checkNumber(Scanner sc) {
         while (!sc.hasNextInt()) {
             sc.nextLine();
@@ -112,8 +132,9 @@ public class Challenges_2 {
     int count = 0;
     
     for(int i=0; i<savedString.length(); i++) {
-        if (savedString.charAt(i) == C);
+        if (savedString.charAt(i) == C) {
             count++;
+        } 
         }
         return count;
     }
