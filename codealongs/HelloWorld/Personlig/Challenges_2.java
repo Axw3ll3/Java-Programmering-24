@@ -46,6 +46,7 @@ public class Challenges_2 {
                 case 4:
                 
                 System.out.println("You choose option 4");
+                    
                     break;
                 
                 
