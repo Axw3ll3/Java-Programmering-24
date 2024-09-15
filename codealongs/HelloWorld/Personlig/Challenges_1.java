@@ -14,7 +14,7 @@ public Scanner getScanner() {
     return sc;
     }
 
-/*
+
 public double getNumbers() {
     System.out.println("Please enter 3 numbers: ");
     System.out.println("Number 1: ");
@@ -26,7 +26,7 @@ public double getNumbers() {
     return 
     
 }
-    */
+    /*
 public int getANumber() {
     Scanner sc = getScanner();
     int Number = 0;
@@ -37,9 +37,9 @@ public int getANumber() {
 
     
 }
+*/
 
-
-public int checkNumber(Scanner sc) {
+public double checkNumber(Scanner sc) {
     while (!sc.hasNextInt()) {
         System.out.println("Please write a number");
         sc.nextLine();
@@ -55,6 +55,14 @@ public int checkNumber(Scanner sc) {
 
         else if (Number < 0) {
             System.out.println("The number is negative");
+        }
+
+        else if (Number < 1) {
+            System.out.println("The number is small");
+        }
+
+        else if (Number > 1000000) {
+            System.out.println("The number is big");
         }
 
         else {
