@@ -146,22 +146,41 @@ public int checkNumber(Scanner sc) {
         */
 
     public void diamondPyramid() {
-        int nrOfRows = sc.nextInt();
-        int start = 1;
-        int n;
 
-        do { 
-          n = 1;
-          
-          do {
-            System.out.print(" ");
-          }while (++n <= nrOfRows - start +1);
+        System.out.println("How many rows of the pyramid do you want?");
+        int nrOfRows = sc.nextInt();
+
+        int rowCount = 1;
+        System.out.println("Here's your pyramid");
+
+        for (int i = nrOfRows; i > 0; i--) {
+            for (int j = 1; j<=i; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j<=rowCount; j++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+
+            rowCount++;        }
+
+
+        for (int i = nrOfRows; i < 0; i++) {
+            for (int j = 1; j<=i; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j<=rowCount; j--) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+
+            rowCount--;
+
+        }
         
+    }
         
-        do { 
-          System.out.println("*");  
-        } while (++n <= nrOfRows * 2 - 1);
-        System.out.print("");
     }
 
-}
