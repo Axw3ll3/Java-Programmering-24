@@ -1,10 +1,13 @@
 import java.util.Scanner;
-import javax.print.attribute.standard.NumberOfDocuments;
+
 
 public class Challenges_1 {
     private Scanner sc = new Scanner (System.in);
-    public static void main(String[] args) {
-            
+    public void main(String[] args) {
+          getANumber();
+
+
+
     }
 
 public Scanner getScanner() {
@@ -26,10 +29,10 @@ public double getNumbers() {
     */
 public int getANumber() {
     Scanner sc = getScanner();
+    int Number = 0;
     System.out.println("Please, enter a number: ");
-    int Number = sc.nextInt();
     Number = checkNumber(sc);
-    Number = checkValue();
+    Number = checkValue(Number);
     return Number;
 
     
@@ -38,6 +41,7 @@ public int getANumber() {
 
 public int checkNumber(Scanner sc) {
     while (!sc.hasNextInt()) {
+        System.out.println("Please write a number");
         sc.nextLine();
     }
         return sc.nextInt();
