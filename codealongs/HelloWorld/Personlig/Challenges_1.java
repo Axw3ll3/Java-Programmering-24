@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Challenges_1 {
     private Scanner sc = new Scanner (System.in);
     public void main(String[] args) {
-          getANumber();
+          getNumbers();
 
 
 
@@ -23,7 +23,7 @@ public double getNumbers() {
     double secondNumber = sc.nextDouble();
     System.out.println("Number 3: ");
     double thirdNumber = sc.nextDouble();
-    return 
+    return;
     
 }
     /*
@@ -47,7 +47,7 @@ public double checkNumber(Scanner sc) {
         return sc.nextInt();
     }
 
-    public int checkValue(int Number) {
+    public double checkValue(double firstNumber, double secondNumber, double thirdNumber) {
 
         if (Number > 0) {
             System.out.println("The number is positive");
