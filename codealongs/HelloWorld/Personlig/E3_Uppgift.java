@@ -23,14 +23,28 @@
     public static void main(String[] args) {
         Book book = new Book();
         book.printDetails();
+        Student_Class Student = new Student_Class("Axel", 12, 3.4);
+        Student.printStudentDetails();
     
         }
 }
 
-/*
+
     class Student_Class{
         private String name;
         private int age;
         private double grade;
+    
+        public Student_Class(String name, int age, double grade) {
+            this.name=name;
+            this.age=age;
+            this.grade=grade;
+        }
+        
+        public void printStudentDetails() {
+            System.out.println("Name: " +name);
+            System.out.println("Age: " + age);
+            System.out.println("Grade: "+ grade);
+        }
     }
-        */
+        
