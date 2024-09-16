@@ -27,7 +27,7 @@
         Student.printStudentDetails();
     
         }
-}
+    }
 
 
     class Student_Class{
@@ -48,3 +48,11 @@
         }
     }
         
+
+
+    class Car_Class {
+        private String make;
+        private String model;
+        private int year;
+        private String color;
+    }
