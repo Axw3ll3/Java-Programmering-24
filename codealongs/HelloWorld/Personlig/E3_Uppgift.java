@@ -11,9 +11,9 @@
         }
     
         public void printDetails () {
-            System.out.println(title);
-            System.out.println(author);
-            System.out.println(year);
+            System.out.println("Title: "+title);
+            System.out.println("Author: " +author);
+            System.out.println("Year: " +year);
         }
     
     
@@ -26,3 +26,11 @@
     
         }
 }
+
+/*
+    class Student_Class{
+        private String name;
+        private int age;
+        private double grade;
+    }
+        */
