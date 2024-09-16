@@ -146,29 +146,24 @@ public class Challenges_1 {
     */
     
     public void diamondPyramid() {
+        System.out.println("How many rows of the pyramid do you want?");
+        Scanner sc = getScanner();
         int nrOfRows = sc.nextInt();
-        int n, m;
+        int i, j;
         
-        for (m = 1; m<=nrOfRows; m++) {
-            System.out.print(" ");
-        }
-        
-        for (n = 1; n<=m*2-1;n++) {
-            System.out.print("*");
-        }
-        
-        System.out.println();
-    
-
-    for (m = nrOfRows - 1; m>0; m--) {
-        for (n=1; n<=nrOfRows-m; n++) {
-            System.out.print(" ");
-        }
-        for (n = 1; n<=m*2-1; n++) {
-            System.out.print("*");
-            
-        }
-        System.out.println();
+        for (i=0;i<=nrOfRows;i++) {
+            for(j=1;j<=nrOfRows-i;j++)
+                System.out.print(" ");
+                for(j=1;j<=2*i-1;j++)
+                    System.out.print("*");
+                    System.out.print("\n");
+            }
+            for (i=nrOfRows-1;i>=1;i--) {
+                for (j=1;j<=nrOfRows-i;j++)
+                System.out.print(" ");
+                for (j=1;j<=2*i-1;j++)
+                System.out.print("*");
+                System.out.print("\n");
+            }
         }
     }
-}
