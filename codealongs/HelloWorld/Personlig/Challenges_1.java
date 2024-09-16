@@ -147,22 +147,28 @@ public class Challenges_1 {
     
     public void diamondPyramid() {
         int nrOfRows = sc.nextInt();
-        int start = 1;
-        int n;
+        int n, m;
         
-        do { 
-            n = 1;
-            
-            do {
-                System.out.print(" ");
-            }while (++n <= nrOfRows - start +1);
-            
-            
-            do { 
-                System.out.println("*");  
-            } while (++n <= nrOfRows * 2 - 1){
-            System.out.print("");}
-        }while (true) {}
+        for (m = 1; m<=nrOfRows; m++) {
+            System.out.print(" ");
+        }
         
+        for (n = 1; n<=m*2-1;n++) {
+            System.out.print("*");
+        }
+        
+        System.out.println();
+    
+
+    for (m = nrOfRows - 1; m>0; m--) {
+        for (n=1; n<=nrOfRows-m; n++) {
+            System.out.print(" ");
+        }
+        for (n = 1; n<=m*2-1; n++) {
+            System.out.print("*");
+            
+        }
+        System.out.println();
+        }
     }
 }
