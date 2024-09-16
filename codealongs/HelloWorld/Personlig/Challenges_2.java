@@ -6,14 +6,14 @@ public class Challenges_2 {
     public void main(String[] args) {
         
         Scanner sc = getScanner();
-
-        System.out.println("Welcome to this simmulation, please choose an option below: ");
-
-        System.out.println(" 1. Add two numbers. \n 2. Count the amount of characters in a string \n 3. Mirror a string \n 4. Add all numbers in a string \n 5. Shut down program");
-
         int choice;
 
+        System.out.println("Welcome to this simmulation, please choose an option below: ");
         do {
+        System.out.println(" 1. Add two numbers. \n 2. Count the amount of characters in a string \n 3. Mirror a string \n 4. Add all numbers in a string \n 5. Shut down program");
+        
+        do {
+
             while (!sc.hasNextInt()) {
                 System.out.println("Invalid input, please write a number");
                 sc.next();
@@ -24,6 +24,7 @@ public class Challenges_2 {
             
 
         }while (choice > 5 || choice == 0);
+
 
         sc.nextLine();
 
@@ -55,6 +56,8 @@ public class Challenges_2 {
                 System.out.println("Shutting down program!");
                     return;
             }
+            System.out.println("------Returning to main menu------");
+        }while (choice != 5);
     }
 
     public Scanner getScanner () {
