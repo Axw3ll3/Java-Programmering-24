@@ -55,4 +55,12 @@
         private String model;
         private int year;
         private String color;
+
+    public Car_Class(String make, String model, int year, String color) {
+        this.make=make;
+        this.model=model;
+        this.year=year;
+        this.color=color;
+
+    }
     }
