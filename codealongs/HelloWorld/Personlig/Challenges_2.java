@@ -9,9 +9,9 @@ public class Challenges_2 {
 
         System.out.println("Welcome to this simmulation, please choose an option below: ");
 
-        System.out.println(" 1. Add two numbers. \n 2. Count the amount of characters in a string \n 3. Mirror a string \n 4. Add all numbers in a string \n 0. Shut down program");
+        System.out.println(" 1. Add two numbers. \n 2. Count the amount of characters in a string \n 3. Mirror a string \n 4. Add all numbers in a string \n 5. Shut down program");
 
-        int choice = 0;
+        int choice;
 
         do {
             while (!sc.hasNextInt()) {
@@ -23,7 +23,7 @@ public class Challenges_2 {
 
             
 
-        }while (choice > 4 || choice == 0);
+        }while (choice > 5 || choice == 0);
 
         sc.nextLine();
 
@@ -50,10 +50,10 @@ public class Challenges_2 {
                     break;
                 
                 
-                case 0:
-                System.out.println("You choose option 0");
+                case 5:
+                System.out.println("You choose option 5");
                 System.out.println("Shutting down program!");
-                    break;
+                    return;
             }
     }
 
