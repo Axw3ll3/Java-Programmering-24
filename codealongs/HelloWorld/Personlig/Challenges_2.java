@@ -46,7 +46,7 @@ public class Challenges_2 {
                 case 4:
                 
                 System.out.println("You choose option 4");
-                    
+                    addNumbersInString();
                     break;
                 
                 
@@ -140,11 +140,28 @@ public class Challenges_2 {
         return count;
     }
    
-    /*
     public static boolean isDigit(char c) {
+        return c >= '0' && c <= '9';
+    }  
     
-    }
-    */
+    public void addNumbersInString() {
+    Scanner sc = getScanner();
+    System.out.println("Pleasae enter a string of numbers: ");
 
+    String inputString = sc.nextLine();
+    int sum = 0;
+
+    for (int i = 0; i<inputString.length(); i++) {
+        char c = inputString.charAt(i);
+
+        if (!isDigit(c)) {
+            System.out.println("This string contains a letter, please input a string of only numbers!");
+            return;
+        }
+        sum += c - 48;
+    }
+    System.out.println("The total sum of the number in the string is: " + sum);
+}
+    
     
 }
