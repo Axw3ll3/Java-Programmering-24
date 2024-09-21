@@ -1,6 +1,6 @@
 package Challenge_3_and_classes;
   
-
+public class Main {
         public static void main(String[] args) {
         House House1 = new House(74.6, 4, 1990, "Berggatan 12");
         House House2 = new House (56.2, 2, 2010, "Bullerbyvägen 56");
@@ -14,6 +14,7 @@ package Challenge_3_and_classes;
         House3.houseDetails();
         System.out.println("");
         */
+        
         Human Human1 = new Human("Axel", "Construction worker", 21, "Man", 170, House1);
         Human1.printHumanDetails();
         House1.showAdress();
@@ -29,10 +30,4 @@ package Challenge_3_and_classes;
         House3.showAdress();
         System.out.println("");
     }
-
-
-
-
-
-
-
+}

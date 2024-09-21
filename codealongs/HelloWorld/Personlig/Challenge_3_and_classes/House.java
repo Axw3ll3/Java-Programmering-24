@@ -21,7 +21,7 @@ public class House {
     }
 
     public void showAdress() {
-        System.out.println("Adress:" +adress);
+        System.out.println("Adress: " +adress);
     }
 
 }
