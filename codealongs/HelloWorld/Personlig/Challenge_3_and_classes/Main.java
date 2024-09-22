@@ -6,14 +6,9 @@ public class Main {
         House House2 = new House (56.2, 2, 2010, "Bullerbyvägen 56");
         House House3 = new House (100.5, 6, 2015, "Klubbhusgatan 27");
         
-        /*
-        House1.houseDetails();
-        System.out.println("");
-        House2.houseDetails();
-        System.out.println("");
-        House3.houseDetails();
-        System.out.println("");
-        */
+        Car Car1 = new Car("Volvo", 150000, 510000);
+        Car Car2 = new Car("Volkswagen", 75000, 1607000);
+
         
         Human Human1 = new Human("Axel", "Construction worker", 21, "Man", 170, House1);
         Human1.printHumanDetails();
@@ -29,5 +24,6 @@ public class Main {
         Human3.printHumanDetails();
         House3.showAdress();
         System.out.println("");
+        
     }
 }
