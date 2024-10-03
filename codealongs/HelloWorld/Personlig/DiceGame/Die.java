@@ -2,25 +2,27 @@ package DiceGame;
 import java.util.Random;
 
 public class Die {
+
+    private static Random random = new Random();
+
     private int currentValue;
     private int sides;
-    private Random random = new Random();
 
     public Die(int sides) {
         this.sides=sides;
-
+        this.currentValue=currentValue;
     }
-    
-    public int getSides(int sides) {
+
+    public int getSides(){
         return sides;
     }
 
-    public int getCurrentValue() {
+    public int getCurrentValue(){
         return currentValue;
     }
 
-    public void roll() {
-        currentValue = random.nextInt(sides) + 1;
+    public void roll(){
+        currentValue=random.nextInt(sides);
     }
+
 }
- 

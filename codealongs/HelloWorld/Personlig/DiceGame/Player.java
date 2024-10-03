@@ -3,7 +3,7 @@ package DiceGame;
 public class Player {
     private String name;
     private int score;
-    private int dice;
+    private Die dice;
 
     public Player(String name) {
         this.name=name;
@@ -26,9 +26,28 @@ public class Player {
         this.score += 1;
     }
 
-    public int rollDice(){
-        if (Die != null) {
-            return Die.getCurrentValue();
+    public void rollDice(){
+        if (dice != null) {
+            dice.roll();
+        }
+        else{
+            System.out.println("No dice is assigned");
         }
     }
+
+    public int getDieValue () {
+        if (dice != null) {
+            return dice.getCurrentValue();
+        }
+        else {
+            System.out.println("No dice is assigned");
+            return -1;
+        }
+    }
+
+    public void addDie(int sides) {
+        this.dice = new Die(sides);
+    }
+
+
 }
