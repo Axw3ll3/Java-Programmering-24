@@ -9,7 +9,7 @@ public class Die {
 
     public Die(int sides) {
         this.sides=sides;
-        this.currentValue=currentValue;
+        this.currentValue=1;
     }
 
     public int getSides(){
