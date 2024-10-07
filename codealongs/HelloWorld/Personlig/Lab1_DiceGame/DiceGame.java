@@ -20,8 +20,10 @@ public class DiceGame {
             for (int i = 1; i<=rounds; i++) {
                 System.out.println("\nOmgång " + i);
     
+                System.out.println("Gissa ett värde mellan 1 och " +sides+ " : ");
                 int guess = scanner.nextInt();
-    
+                
+                player.rollDice();
                 int dieValue = player.getDieValue();
                 System.out.println("Tärningen visade: " +dieValue);
     
@@ -33,7 +35,7 @@ public class DiceGame {
                     System.out.println("Tyvärr, du gissade fel.");
                 }
             }
-            System.out.println("\nSpelet är över! " + player.getName() + " du fick totalt:" +player.getScore() + " poäng.");
+            System.out.println("\nSpelet är över! " + player.getName() + " du fick totalt: " +player.getScore() + " poäng.");
     
         }
     }
