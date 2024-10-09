@@ -5,7 +5,7 @@ public class GameEngine {
     
     Scanner scanner = new Scanner(System.in);
            
-            public void startIntro(){
+            public void startGame(){
             System.out.println("Select amount of rounds: ");
             int rounds = scanner.nextInt();
     
@@ -40,7 +40,7 @@ public class GameEngine {
             }
 
         public void Launch(){
-            startIntro();
+            startGame();
         }
     }
 
