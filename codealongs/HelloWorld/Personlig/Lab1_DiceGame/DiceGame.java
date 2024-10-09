@@ -1,5 +1,4 @@
 package Lab1_DiceGame;
-import java.util.Scanner;
 
 public class DiceGame {
         public static void main (String[] args) {
