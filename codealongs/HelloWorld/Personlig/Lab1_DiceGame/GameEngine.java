@@ -1,10 +1,11 @@
+package Lab1_DiceGame;
 import java.util.Scanner;
 
 public class GameEngine {
     
-    public void start() {
     Scanner scanner = new Scanner(System.in);
-            
+           
+            public void startIntro(){
             System.out.println("Select amount of rounds: ");
             int rounds = scanner.nextInt();
     
@@ -13,10 +14,12 @@ public class GameEngine {
             
             System.out.println("How many sides do you want the dice to have?");
             int sides = scanner.nextInt();
-    
+            
             Player player = new Player(playerName);
             player.addDie(sides);
-    
+            }
+
+            public void startGame(){
             for (int i = 1; i<=rounds; i++) {
                 System.out.println("\nOmgång " + i);
     
@@ -36,6 +39,10 @@ public class GameEngine {
                 }
             }
             System.out.println("\nSpelet är över! " + player.getName() + " du fick totalt: " +player.getScore() + " poäng.");
-    
+            }
         }
-}
+        public void Launch(){
+            startIntro();
+            startGame();
+        }
+
