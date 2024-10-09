@@ -17,10 +17,8 @@ public class GameEngine {
             
             Player player = new Player(playerName);
             player.addDie(sides);
-            }
-
-            public void startGame(){
-            for (int i = 1; i<=rounds; i++) {
+            
+            for (int i = 0; i<= rounds ; i++) {
                 System.out.println("\nOmgång " + i);
     
                 System.out.println("Gissa ett värde mellan 1 och " +sides+ " : ");
@@ -40,9 +38,9 @@ public class GameEngine {
             }
             System.out.println("\nSpelet är över! " + player.getName() + " du fick totalt: " +player.getScore() + " poäng.");
             }
-        }
+
         public void Launch(){
             startIntro();
-            startGame();
         }
+    }
 
