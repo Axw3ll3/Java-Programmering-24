@@ -1,13 +1,15 @@
 package Lab1_DiceGame;
+import java.util.ArrayList;
 
 public class Player {
     private String name;
     private int score;
-    private Die dice;
+    private ArrayList<Die> dice;
 
     public Player(String name) {
         this.name=name;
         this.score=0;
+        this.dice = new ArrayList<>();
     }
 
     public String getName() {
@@ -22,31 +24,26 @@ public class Player {
         this.score = 1;
     }
 
-    public void increaseScore() {
-        this.score += 1;
+    public void increaseScoreBy(int value) {
+        score += 1;
     }
 
-    public void rollDice(){
-        if (dice != null) {
-            dice.roll();
-        }
-        else{
-            System.out.println("No dice is assigned");
+    public void rollAllDice(){
+        for (Die die : dice) {
+            die.roll();
         }
     }
 
-    public int getDieValue () {
-        if (dice != null) {
-            return dice.getCurrentValue();
+    public ArrayList<Integer> getAllDieValue () {
+        ArrayList<Integer> values = new ArrayList<>();
+        for (Die die : dice) {
+            values.add(die.getCurrentValue());
         }
-        else {
-            System.out.println("No dice is assigned");
-            return -1;
-        }
+        return values;
     }
 
     public void addDie(int sides) {
-        this.dice = new Die(sides);
+        this.dice.add(new Die (sides));
     }
 
 

@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class Die {
     private static Random random = new Random();
-
     private int currentValue;
     private int sides;
 
@@ -21,7 +20,7 @@ public class Die {
     }
 
     public void roll(){
-        currentValue=random.nextInt(sides);
+        currentValue=random.nextInt(sides) + 1;
     }
 
 }

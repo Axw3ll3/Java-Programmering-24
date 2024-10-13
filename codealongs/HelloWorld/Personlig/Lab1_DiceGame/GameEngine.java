@@ -1,11 +1,18 @@
 package Lab1_DiceGame;
+import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
 public class GameEngine {
     
     Scanner scanner = new Scanner(System.in);
            
             public void startGame(){
+
+                MultiplayerDiceGame game = new MultiplayerDiceGame();
+                
+                ArrayList<Player> players = game.initialize();
+
+
             System.out.println("Select amount of rounds: ");
             int rounds = scanner.nextInt();
     
@@ -43,4 +50,4 @@ public class GameEngine {
             startGame();
         }
     }
-
+*/

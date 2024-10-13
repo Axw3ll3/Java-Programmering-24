@@ -38,13 +38,13 @@ public class MultiplayerDiceGame {
     }
 
     public void takeTurn(ArrayList<Player> players) {
-        for (Player player : player) {
+        for (Player player : players) {
             System.out.println(player.getName() + "'s tur:");
 
             int totalValue = 0;
             player.rollAllDice();
 
-            for (int dieValue : player.getAllDieValues()) {
+            for (int dieValue : player.getAllDieValue()) {
                 System.out.println("Tärningen visar: " + dieValue);
                 totalValue += dieValue;
             }
