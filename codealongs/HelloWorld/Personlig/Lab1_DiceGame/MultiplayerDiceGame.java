@@ -4,13 +4,34 @@ import java.util.Scanner;
 
 public class MultiplayerDiceGame {
 
-    public static void playGame() {
+    public static void playGame() { //Metod för att starta spelet, samt prompts med förklaringar för spelaren vad dem ska göra
         ArrayList<Player> players = initialize();
         
-    }
+        Scanner scanner = new Scanner (System.in); 
+        System.out.println("Hur många omgångar vill ni spela?");
+        int rounds = scanner.nextInt();
 
-    private static ArrayList<Player> initialize() {
-    Scanner scanner = new Scanner (System.in);
+        for (int i = 1; i <= rounds; i++) {
+            System.out.println("\n--- Omgång " +i+ "---");
+            takeTurn(players);
+        }
+
+        ArrayList<Player> winners = getWinners(players);
+        System.out.println("\n--- Spelet är över ---");
+        System.out.println("Slutliga poäng:");
+        for (Player player : players) {
+            System.out.println(player.getName() + ": " + player.getScore() + " poäng");
+        }
+        
+        System.out.println("\nVinnare: ");
+        for (Player winner : winners) {
+            System.out.println(winner.getName());
+        }
+
+    }
+    
+    private static ArrayList<Player> initialize() { //
+        Scanner scanner = new Scanner (System.in);
 
         System.out.println("Hur många spelare ska spela?");
         int numberOfPlayers = scanner.nextInt();
@@ -37,7 +58,7 @@ public class MultiplayerDiceGame {
         return players;
     }
 
-    public void takeTurn(ArrayList<Player> players) {
+    public static void takeTurn(ArrayList<Player> players) {
         for (Player player : players) {
             System.out.println(player.getName() + "'s tur:");
 
@@ -52,7 +73,7 @@ public class MultiplayerDiceGame {
             System.out.println(player.getName() + " fick totalt: " +totalValue+ " poäng denna omgång. \n");
         }
     }
-    public ArrayList<Player> getWinners(ArrayList<Player> players) {
+    public static ArrayList<Player> getWinners(ArrayList<Player> players) {
         ArrayList<Player> winners = new ArrayList<>();
         int highestScore = 0;
 

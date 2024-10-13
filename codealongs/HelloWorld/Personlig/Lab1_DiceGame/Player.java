@@ -25,7 +25,7 @@ public class Player {
     }
 
     public void increaseScoreBy(int value) {
-        score += 1;
+        score += value;
     }
 
     public void rollAllDice(){
