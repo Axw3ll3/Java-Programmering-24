@@ -55,9 +55,10 @@ public class MultiplayerDiceGame {
         ArrayList<Player> players = new ArrayList<>();
 
         //Skapa spelare och tilldelar tärningar
+        scanner.nextLine();
         for (int i = 1; i <= numberOfPlayers; i++) {
             System.out.println("Ange namnet på spelare " +i+ ": ");
-            String playerName = scanner.next();
+            String playerName = scanner.nextLine();
             Player player = new Player (playerName);
 
             //Lägger till det önskade antalet tärningar till spelaren
