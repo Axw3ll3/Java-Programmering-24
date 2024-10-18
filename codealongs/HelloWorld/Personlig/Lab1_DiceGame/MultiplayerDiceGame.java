@@ -12,7 +12,7 @@ public class MultiplayerDiceGame {
         //Fråga om hur många omgångar som ska spelas
         Scanner scanner = new Scanner (System.in); 
         System.out.println("Hur många omgångar vill ni spela?");
-        int rounds = scanner.nextInt();
+        int rounds = checkNumber(scanner);
 
         //Kör spelet under angivet antal omgångar
         for (int i = 1; i <= rounds; i++) {
@@ -41,22 +41,22 @@ public class MultiplayerDiceGame {
 
         //Fråga om antalet spelare
         System.out.println("Hur många spelare ska spela?");
-        int numberOfPlayers = scanner.nextInt();
+        int numberOfPlayers = checkNumber(scanner);
         
         //Fråga om antalet tärningar per spelare
         System.out.println("Hur många tärningar ska varje spelare ha?");
-        int numberOfDices = scanner.nextInt();
+        int numberOfDices = checkNumber(scanner);
 
         //Frågar om antal sidor på tärning(arna)
         System.out.println("Hur många sidor ska tärningarna ha?");
-        int sides = scanner.nextInt();
+        int sides = checkNumber(scanner);
 
         //Skapa en lista av spelare
         ArrayList<Player> players = new ArrayList<>();
 
         //Skapa spelare och tilldelar tärningar
         for (int i = 1; i <= numberOfPlayers; i++) {
-            System.out.println("Ange namnet på spelare " +i+ ": ");
+            System.out.println("Ange namnet på spelare " + i + ": ");
             String playerName = scanner.next();
             Player player = new Player (playerName);
 
@@ -109,6 +109,29 @@ public class MultiplayerDiceGame {
             }
         }
         return winners; //Returnerar en lista med vinnare
+    }
+
+    //Check av input så det är ett positivt nummer över 0
+    public static int checkNumber(Scanner scanner) {
+        int number;
+        boolean firstrun = true;
+        do {
+
+            if(!firstrun) {System.out.println("Skriv ett positivt nummer tack!");}
+            while (!scanner.hasNextInt()) {
+                
+                System.out.println("Skriv ett nummer tack!");
+                
+                scanner.next(); 
+                
+            }
+            
+            firstrun = false;
+            number = scanner.nextInt();
+        
+        } while (number <= 0);
+        return number;
+        
     }
 }
 
