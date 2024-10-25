@@ -9,7 +9,7 @@ public class Fire {
     }
 
     public void arrivalAtFirePlace(){
-        System.out.println(); //Historia för när spelare anländer vid eldstad
+        //Historia när spelaren anländer
     }
 
     public void askToLit() {
@@ -19,7 +19,7 @@ public class Fire {
 
     public void ifLit() {
         isLit = true;
-        System.out.println("You've decided to start the fire");
+        slowPrintln("You've decided to start the fire", 50);
         intelligence += 1;
         System.out.println("You've also gotten a skillpoint for intelligence.");
         System.out.println("Unfortunally, you attracted spiders");
