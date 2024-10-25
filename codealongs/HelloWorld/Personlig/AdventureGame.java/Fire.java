@@ -21,7 +21,7 @@ public class Fire {
         isLit = true;
         slowPrintln("You've decided to start the fire", 50);
         intelligence += 1;
-        System.out.println("You've also gotten a skillpoint for intelligence.");
+        slowPrintln("You've also gotten a skillpoint for intelligence.", 50);
         System.out.println("Unfortunally, you attracted spiders");
         //Metod för att kalla på spindlar
     }
