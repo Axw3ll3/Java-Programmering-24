@@ -25,6 +25,7 @@ public class Fire {
         isLit = false;
         System.out.println("Due to you not putting up the fire, you've gotten cold and lost a healthpoint.");
         health -=1;
+        System.out.println("You've moved on without a scratch though, which let you move on to the next part of the story");
 
     }
 }
