@@ -8,6 +8,10 @@ public class Fire {
         this.isLit = false;
     }
 
+    public void arrivalAtFirePlace(){
+        System.out.println(); //Historia för när spelare anländer vid eldstad
+    }
+
     public void askToLit() {
         //Metod för att hämta valmeny
 
