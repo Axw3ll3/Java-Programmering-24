@@ -1,4 +1,4 @@
-package AdventureGame.java;
+package Adventure_Game;
 
 public class Puzzle {
     
