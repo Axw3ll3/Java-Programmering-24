@@ -1,6 +1,6 @@
 package JurassicPark;
-import JurassicPark.food.*;
 import JurassicPark.dinosaur.*;
+import JurassicPark.food.*;
 
 public class DinosaurDemo {
     public static void main(String[] args) {

@@ -22,4 +22,6 @@ public abstract class Food {
     public boolean isPoisonous() {
         return isPoisonous;
     }
+
+    public abstract String getFoodType();
 }
