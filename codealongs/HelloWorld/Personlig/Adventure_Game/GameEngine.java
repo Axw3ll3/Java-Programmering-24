@@ -5,7 +5,9 @@ public class GameEngine {
         Slowprint slowprint = new Slowprint();
         FirePlace fire = new FirePlace();
         fire.arrivalAtFirePlace();
+        System.out.println("");
         fire.ifLit();
+        System.out.println("");
         fire.ifNotLit();
 
     }
