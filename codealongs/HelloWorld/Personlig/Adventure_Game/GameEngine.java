@@ -12,19 +12,16 @@ public class GameEngine {
         fire.ifNotLit();
         */
         
-        /*
         Food food = new Food();
-        System.out.println("");
         food.findingTheFood();
-        System.out.println("");
-        food.eatingTheFood();
-        System.out.println("");
-        food.notEatingTheFood();
-        */
 
+        /*
         Puzzle puzzle = new Puzzle();
         puzzle.arrivalAtPuzzle();
         puzzle.questionAndChoice();
+        */
+        
+    
     }
     
 }

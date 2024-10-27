@@ -58,7 +58,7 @@ public class Food {
         if (random == 0) {
             isPoisonous = true;
             health -= 1;
-            slowprint.slowPrintln("The beans you found are poisonous, and this makes you lose -1 Healthpoint. You still got " +health+ " left.");
+            slowprint.slowPrintln("The beans you found are old and made you get food poisoning, and this makes you lose -1 Healthpoint. You still got " +health+ " left.");
             //Metod check för om spelaren dör
             //Metod för att ta sig vidare
         }
