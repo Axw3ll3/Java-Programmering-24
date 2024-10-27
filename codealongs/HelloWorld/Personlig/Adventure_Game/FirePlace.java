@@ -1,10 +1,11 @@
 package Adventure_Game;
+import java.util.Scanner;
 
 public class FirePlace {
     //Glöm inte att ta bort health, intellegence och slowprint sen.
     private boolean isLit;
-    private String choice;
     Slowprint slowprint = new Slowprint();
+    Scanner scanner = new Scanner(System.in);
     int health = 3;
     int intelligence = 0;
 
@@ -23,22 +24,68 @@ public class FirePlace {
 
     public void askToLit() {
         //Metod för att hämta valmeny
+        int choice;
+                //Visar meny och hämtar användarens val.
+                while (true) {
+                    slowprint.slowPrintln("1. Yes");
+                    slowprint.slowPrintln("2. No");
+        
+                    // Kallar på metod för att se att input av användare är en integer
+                   choice = checkChoice(scanner);
+        
+                        switch (choice) {
+                            case 1:
+                                ifLit();
+                                break;
+        
+                            case 2:
+                                ifNotLit();
+                                break;
+                        
+                        }
+                        
+                    } 
+                }
 
-    }
+    
 
     public void ifLit() {
         isLit = true;
-        slowprint.slowPrintln("You've decided to lit the fire.", 50);
+        slowprint.slowPrintln("You've decided to lit the fire.");
         intelligence += 1;
         slowprint.slowPrintln("You've also gotten a skillpoint for intelligence! " + "Unfortunally, you attracted spiders towards your position." ,50);
         //Metod för att kalla på spindlar
     }
     public void ifNotLit() {
         isLit = false;
-        slowprint.slowPrintln("You've decided to not lit the fire.", 50);
+        slowprint.slowPrintln("You've decided to not lit the fire.");
         health -=1;
         slowprint.slowPrintln("Due to you not putting up the fire, you've gotten cold and lost a healthpoint. " + "-1 Healthpoint, you still got "+health+ " left");
         slowprint.slowPrintln("You've moved on without a scratch though, which let's you move on to the next part of the story");
         //Metod för att ta sig vidare i historien
     }
-}
+    public int checkChoice (Scanner scanner){
+        //Check av input så det är ett positivt nummer över 0
+            int number;
+            boolean firstrun = true;
+            do {
+    
+                if(!firstrun) {slowprint.slowPrintln("Write a numberical option (1 or 2)!");}
+                while (!scanner.hasNextInt()) {
+                    
+                    slowprint.slowPrintln("Write a number!");
+                    
+                    scanner.next(); 
+                    
+                }
+                
+                firstrun = false;
+                number = scanner.nextInt();
+            
+            } while (number < 1 || number > 2);
+            return number;
+            
+        }
+    }
+
+    

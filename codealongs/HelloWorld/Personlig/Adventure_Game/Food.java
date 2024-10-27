@@ -3,6 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Food {
+    //Glöm inte ta bort intelligence, health, Slowprint och scanner
     private boolean isPoisonous;
     int intelligence;
     int health = 3;
@@ -41,10 +42,6 @@ public class Food {
                             case 2:
                                 notEatingTheFood();
                                 break;
-        
-                            default:
-                                System.out.println("Invalid choice. Please enter 1 or 2.");
-                                continue; // Continue to prompt again if invalid
                         
                         }
                         
@@ -83,7 +80,7 @@ public class Food {
             boolean firstrun = true;
             do {
     
-                if(!firstrun) {slowprint.slowPrintln("Write a numberical option (1-4)!");}
+                if(!firstrun) {slowprint.slowPrintln("Write a numberical option (1 or 2)!");}
                 while (!scanner.hasNextInt()) {
                     
                     slowprint.slowPrintln("Write a number!");

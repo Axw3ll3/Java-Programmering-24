@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Puzzle {
+    //Glöm inte ta bort intelligence, scanner, slowprint och food sen.
     boolean isSolved = false;
     int intelligence;
     Scanner scanner = new Scanner(System.in);
@@ -20,12 +21,13 @@ public class Puzzle {
 
     public void arrivalAtPuzzle() {
         slowprint.slowPrintln("You stand alone in the dusty police station, facing an old filing cabinet. "
-        + "In the corner of your eye you spot a keypad with a display above it. "
-        + "\nYou walk towards it, on the display it says:");
-
+        + "\nYou walk out of the office and out in the hallways. As you navigate through the dimly lit hallways, you find a room marked 'Survival'. " 
+        + "\nInside, there is a large, rusted puzzle with a numeric combination. It reads:");
+        questionAndChoice();
     }
     
     public void ifSolved(){
+        isSolved = true;
         food.findingTheFood();
         food.choiceOfEating();
         //Metod för om dem ska äta mat eller inte
@@ -33,7 +35,7 @@ public class Puzzle {
 
 
     public void ifNotSolved(){
-        slowprint.slowPrintln("You couldn't come up with the answer to the equation and decide to leave the policestation due to you already exploring the whole place.");
+        slowprint.slowPrintln("You couldn't come up with the answer to the puzzle (equation) and decide to leave the policestation due to you already exploring the whole place.");
         //Metod för val mellan sjukhus och köpcentrum
     }
 
@@ -69,12 +71,12 @@ public class Puzzle {
             int correctAnswer = calculateAnswer(num1, num2, operator, random);
 
             //Utskrift av fråga och alternativ
-            slowprint.slowPrintln("What is " + num1 + " " + operator + " " + num2 + "?");
+            slowprint.slowPrintln("Let's unveil the enigma of " + num1 + " " + operator + " " + num2);
             ArrayList<Integer> options = generateOptions(correctAnswer, random);
             for (int j = 0; j < options.size(); j++) slowprint.slowPrintln((j + 1) + ". " + options.get(j));
 
             //Hämtar användarens val och kollar om det är korrekt
-            slowprint.slowPrintln("Enter your choice on the keypad: ");
+            slowprint.slowPrintln("Enter your choice of answer on the keypad: ");
             if (options.get(checkChoice(scanner) - 1) == correctAnswer) {
                 ifSolved();
             } else {

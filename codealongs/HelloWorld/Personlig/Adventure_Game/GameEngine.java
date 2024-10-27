@@ -6,21 +6,19 @@ public class GameEngine {
         /*
         FirePlace fire = new FirePlace();
         fire.arrivalAtFirePlace();
-        System.out.println("");
-        fire.ifLit();
-        System.out.println("");
-        fire.ifNotLit();
         */
-        
+        /*
         Food food = new Food();
         food.findingTheFood();
+        */
 
         /*
         Puzzle puzzle = new Puzzle();
         puzzle.arrivalAtPuzzle();
-        puzzle.questionAndChoice();
         */
         
+        Riddle riddle = new Riddle();
+        riddle.arrivalAtRiddle();
     
     }
     
