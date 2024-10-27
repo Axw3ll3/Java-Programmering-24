@@ -66,8 +66,8 @@ public class Puzzle {
         for (int i = 0; i < 1; i++) {
             //Generation av random nummer, operator och uträkning av korrekt svar
             int num1 = random.nextInt(15) + 1, num2 = random.nextInt(15) + 1;
-            String[] operators = {"+", "-", "*", "/"};
-            String operator = operators[random.nextInt(4)];
+            String[] operators = {"+", "-", "*"};
+            String operator = operators[random.nextInt(3)];
             int correctAnswer = calculateAnswer(num1, num2, operator, random);
 
             //Utskrift av fråga och alternativ
@@ -93,7 +93,6 @@ public class Puzzle {
             case "+": return num1 + num2;
             case "-": return num1 - num2;
             case "*": return num1 * num2;
-            case "/": num1 = num1 * num2; return num1 / num2; // Säkrar att integer division finns/fungerar
             default: return 0;
         }
     }

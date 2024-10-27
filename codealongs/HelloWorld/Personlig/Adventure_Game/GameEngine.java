@@ -18,7 +18,8 @@ public class GameEngine {
         */
         
         Riddle riddle = new Riddle();
-        riddle.arrivalAtRiddle();
+        //riddle.arrivalAtRiddle();
+        riddle.questionAndChoice();
     
     }
     
