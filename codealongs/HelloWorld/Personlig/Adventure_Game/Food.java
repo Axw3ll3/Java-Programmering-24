@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Food {
     //Glöm inte ta bort intelligence, health, Slowprint och scanner
-    private boolean isPoisonous;
     int intelligence;
     int health = 3;
     int strength;
@@ -15,7 +14,6 @@ public class Food {
 
 
     public Food() {
-        this.isPoisonous=isPoisonous;
     }
 
     public void findingTheFood() {
@@ -53,14 +51,12 @@ public class Food {
     public void eatingTheFood() {
         int random = r.nextInt(2);
         if (random == 0) {
-            isPoisonous = true;
             health -= 1;
             slowprint.slowPrintln("The beans you found are old and made you get food poisoning, and this makes you lose -1 Healthpoint. You still got " +health+ " left.");
             //Metod check för om spelaren dör
             //Metod för att ta sig vidare
         }
         else if (random == 1) {
-            isPoisonous = false;
             slowprint.slowPrintln("You've found yourself some fresh beans, which makes your strenght go up by 1 due to you getting much needed energy.");
             strength +=1;
             //Metod för att ta sig vidare

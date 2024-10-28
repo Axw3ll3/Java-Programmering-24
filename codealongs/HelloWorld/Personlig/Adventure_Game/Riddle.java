@@ -5,14 +5,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Riddle {
-    boolean isSolved = false;
+
     int health = 3;
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
     Slowprint slowprint = new Slowprint();
 
     public Riddle() {
-        this.isSolved=isSolved;
     }
 
     public void arrivalAtRiddle(){
@@ -24,7 +23,6 @@ public class Riddle {
     }
 
     public void ifRiddleSolved() {
-        isSolved = true;
         slowprint.slowPrintln("You've solved the numeric riddle the door opens up. You run towards freedom!");
         //Kalla på metod för att avsluta spel och visa resultat
     }

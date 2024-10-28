@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Puzzle {
     //Glöm inte ta bort intelligence, scanner, slowprint och food sen.
-    boolean isSolved = false;
     int intelligence;
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
@@ -16,7 +15,6 @@ public class Puzzle {
 
 
     public Puzzle() {
-        this.isSolved = isSolved;
     }
 
     public void arrivalAtPuzzle() {
@@ -27,7 +25,6 @@ public class Puzzle {
     }
     
     public void ifSolved(){
-        isSolved = true;
         food.findingTheFood();
         food.choiceOfEating();
         //Metod för om dem ska äta mat eller inte
