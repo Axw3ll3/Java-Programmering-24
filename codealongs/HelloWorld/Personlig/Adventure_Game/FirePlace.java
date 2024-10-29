@@ -55,6 +55,7 @@ public class FirePlace {
         intelligence += 1;
         slowprint.slowPrintln("You've also gotten a skillpoint for intelligence! " + "Unfortunally, you attracted spiders towards your position." ,50);
         //Metod för att kalla på spindlar
+        
     }
     public void ifNotLit() {
         isLit = false;
