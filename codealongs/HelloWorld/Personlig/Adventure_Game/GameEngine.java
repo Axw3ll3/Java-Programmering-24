@@ -7,6 +7,7 @@ public class GameEngine {
         FirePlace fire = new FirePlace();
         fire.arrivalAtFirePlace();
         */
+        
         /*
         Food food = new Food();
         food.findingTheFood();

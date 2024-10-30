@@ -27,7 +27,6 @@ public class Puzzle {
     public void ifSolved(){
         food.findingTheFood();
         food.choiceOfEating();
-        //Metod för om dem ska äta mat eller inte
     }
 
 

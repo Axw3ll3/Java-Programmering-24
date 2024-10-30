@@ -11,6 +11,7 @@ public class Food {
     int random = r.nextInt(2);
     Slowprint slowprint = new Slowprint();
     Scanner scanner = new Scanner(System.in);
+    Spider spider = new Spider();
 
 
     public Food() {
