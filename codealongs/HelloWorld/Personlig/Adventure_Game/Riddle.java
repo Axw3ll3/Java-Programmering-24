@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Riddle {
-
     int health = 3;
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
