@@ -14,7 +14,7 @@ public class Calculator {
 
     public int add(int addend, int augend) {
         int result = addend + augend;
-        return addend + result;
+        return result;
     }
 
     public double divide(int denominator, int nominator) {
@@ -29,5 +29,9 @@ public class Calculator {
     public int stringLength(String str1, String str2) {
         String totalStr = str1 + str2;
         return totalStr.length();
+    }
+
+    public static boolean isPalindrome(String str) {
+        return str.equals(new StringBuilder(str).reverse().toString());
     }
 }
