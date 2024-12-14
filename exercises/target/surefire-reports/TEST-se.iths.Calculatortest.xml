@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="se.iths.Calculatortest" time="0.042" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="se.iths.Calculatortest" time="0.063" tests="2" errors="0" skipped="0" failures="0">
   <properties>
+    <property name="jpda.address" value="60665"/>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
@@ -11,12 +12,13 @@
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="user.country.format" value="SE"/>
+    <property name="forkMode" value="once"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="22"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\AxelsDator\AppData\Local\Temp\surefire134100136643784550\surefirebooter-20241213102720618_3.jar C:\Users\AxelsDator\AppData\Local\Temp\surefire134100136643784550 2024-12-13T10-27-20_500-jvmRun1 surefire-20241213102720618_1tmp surefire_0-20241213102720618_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\AxelsDator\AppData\Local\Temp\surefire14511211988181192840\surefirebooter-20241214185322726_3.jar C:\Users\AxelsDator\AppData\Local\Temp\surefire14511211988181192840 2024-12-14T18-53-22_609-jvmRun1 surefire-20241214185322726_1tmp surefire_0-20241214185322726_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="se.iths.Calculatortest"/>
     <property name="surefire.test.class.path" value="C:\Users\AxelsDator\OneDrive - IT-Högskolan Sverige AB\Java-Programmering-24\exercises\target\test-classes;C:\Users\AxelsDator\OneDrive - IT-Högskolan Sverige AB\Java-Programmering-24\exercises\target\classes;C:\Users\AxelsDator\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\AxelsDator\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;C:\Users\AxelsDator\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\AxelsDator\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\AxelsDator\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\AxelsDator\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\AxelsDator\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.1\junit-jupiter-params-5.9.1.jar;"/>
@@ -32,7 +34,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\AxelsDator\AppData\Local\Temp\surefire134100136643784550\surefirebooter-20241213102720618_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\AxelsDator\AppData\Local\Temp\surefire14511211988181192840\surefirebooter-20241214185322726_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -43,6 +45,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="jpda.listen" value="true"/>
     <property name="maven.ext.class.path" value="C:\Users\AxelsDator\.vscode\extensions\oracle.oracle-java-23.0.1\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="localRepository" value="C:\Users\AxelsDator\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -61,7 +64,8 @@
     <property name="java.vm.version" value="22.0.2+9-70"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
+    <property name="maven.surefire.debug" value="-agentlib:jdwp=transport=dt_socket,server=n,address=60665"/>
   </properties>
-  <testcase name="testAddition" classname="se.iths.Calculatortest" time="0.019"/>
-  <testcase name="testDivision" classname="se.iths.Calculatortest" time="0.003"/>
+  <testcase name="testAddition" classname="se.iths.Calculatortest" time="0.037"/>
+  <testcase name="testDivision" classname="se.iths.Calculatortest" time="0.001"/>
 </testsuite>
