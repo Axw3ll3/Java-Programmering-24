@@ -1,4 +1,4 @@
-package se.iths;
+package demoprodject;
 
 public class Calculator {
     public int add(int a, int b) {
@@ -24,7 +24,4 @@ public class Calculator {
         // Logic not yet implemented
         throw new UnsupportedOperationException();
     }
-
-
-
 }
