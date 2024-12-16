@@ -46,6 +46,11 @@ public class DatabaseTest {
     }
     @Test
     void whenProductNotFound_thenReturnNull() {
+        when(mockDatabase.findById("999")).thenReturn(null);
+
+        Product result = mockDatabase.findById("999");
+
+        assertNull(result);
     }
 
     @Test
