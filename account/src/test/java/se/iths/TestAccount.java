@@ -12,8 +12,4 @@ public class TestAccount {
         Account account = new Account(100);
         assertEquals(100, account.balance);
     }
-
-    public void DepositMoney {
-        int MoneyDeposited =
-    }
 }
