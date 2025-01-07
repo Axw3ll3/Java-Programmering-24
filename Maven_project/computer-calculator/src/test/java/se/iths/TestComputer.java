@@ -1,10 +1,10 @@
 package se.iths;
 
-import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.*;
-
-
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class TestComputer {
 
@@ -36,7 +36,7 @@ public class TestComputer {
 
         int result = computer.compute("multiplication",3, 6);
 
-        assertEquals(18,result);
+        assertEquals(18, result);
 
         verify(calculatorMock).multiply(3, 6);
         // 1. Create Computer object to use as test object.
@@ -48,6 +48,10 @@ public class TestComputer {
 
     @Test
     public void twelveMinusSevenEqualsFive() {
+        Calculator calculatorMock = mock(Calculator.class);
+        Computer computer = new Computer(calculatorMock);
+
+        
         // 1. Create Computer object to use as test object.
         // 2. Make sure Calculator is mocked to enable stubbing of output.
         // 3. Stub CalculatorMock to output correct value when subtract()-method is called.
