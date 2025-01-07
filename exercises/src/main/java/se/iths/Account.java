@@ -3,28 +3,36 @@ package se.iths;
 import java.util.Scanner;
 
 public class Account {
-    private int saldo;
-    private int amount;
+    private double saldo = 100.0;
+    private double amount = 50.0;
     Scanner scanner = new Scanner(System.in);
 
     public Account() {
-        this.saldo = 100;
-        this.amount = 50;
+        this.saldo = saldo;
+        this.amount = amount;
     }
 
-    public int WithdrawMoney(int amount) {
-        return saldo - amount;
+    public double WithdrawMoney() {
+        double result;
+        result = saldo - amount;
+        saldo = result;
+        return saldo;
     }
 
-    public int DepositMoney(int amount) {
-        return saldo + amount;
+    public double DepositMoney() {
+        double result;
+        result = saldo + amount;
+        saldo = result;
+        return saldo;
     }
-    public int getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
     public double Rent() {
-        double rent = saldo * 1.04;
-        return rent;
+        double rent;
+        rent = saldo * 1.04;
+        saldo = rent;
+        return saldo;
     }
 
 }

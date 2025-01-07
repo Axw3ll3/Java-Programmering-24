@@ -8,9 +8,6 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 public class TestAccount {
-    @Mock
-    private Account mockAccount;
-
     @Test
     public void testCreateNewAccount() {
 
@@ -22,7 +19,22 @@ public class TestAccount {
     @Test
     public void testDeposit() {
         Account account = new Account();
+        account.DepositMoney();
+        assertEquals(150, account.getSaldo());
+    }
 
+    @Test
+    public void testWithdraw() {
+        Account account = new Account();
+        account.WithdrawMoney();
         assertEquals(50, account.getSaldo());
+
+    }
+
+    @Test
+    public void testRent() {
+        Account account = new Account();
+        account.Rent();
+        assertEquals(104, account.getSaldo());
     }
 }
