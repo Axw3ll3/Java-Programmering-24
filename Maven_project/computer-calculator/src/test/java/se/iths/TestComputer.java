@@ -2,6 +2,8 @@ package se.iths;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -51,6 +53,13 @@ public class TestComputer {
         Calculator calculatorMock = mock(Calculator.class);
         Computer computer = new Computer(calculatorMock);
 
+        when(calculatorMock.subtract(12, 7)).thenReturn(5);
+
+        int result = computer.compute("subtraction",12, 7);
+
+        assertEquals(5, result);
+
+        verify(calculatorMock).subtract(12, 7);
         
         // 1. Create Computer object to use as test object.
         // 2. Make sure Calculator is mocked to enable stubbing of output.
@@ -61,6 +70,16 @@ public class TestComputer {
 
     @Test
     public void twoPowerOfFourEquals64() {
+        Calculator calculatorMock = mock(Calculator.class);
+        Computer computer = new Computer(calculatorMock);
+
+        when(calculatorMock.power(2, 4)).thenReturn(64);
+
+        int result = computer.compute("power",2, 4);
+
+        assertEquals(64, result);
+
+        verify(calculatorMock).power(2, 4);
         // 1. Create Computer object to use as test object.
         // 2. Make sure Calculator is mocked to enable stubbing of output.
         // 3. Stub CalculatorMock to output correct value when power()-method is called.
@@ -68,8 +87,14 @@ public class TestComputer {
         // 5. Assert that the result from {4} is equal to the expected result (64).
     }
 
+
     @Test
-    public void invalidModeThrowsException() {
+    void testComputeWithInvalidModeThrowsException() {
+        Calculator mockCalculator = mock(Calculator.class);
+        Computer computer = new Computer(mockCalculator);
+
+        assertThrows(IllegalArgumentException.class, () ->
+                computer.compute("invalidMode", 5, 3));
         // 1. Create Computer object to use as test object.
         // 2. Assert that an InvalidArgumentException is thrown when the compute()-method is used with invalid mode. (Code Under Test)
     }
