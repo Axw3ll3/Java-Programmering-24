@@ -3,13 +3,23 @@ package se.iths;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.mockito.*;
+
 import static org.mockito.Mockito.*;
 
 public class TestComputer {
 
     @Test
     public void eightPlusElevenEquals19() {
+        Calculator calculatorMock = mock(Calculator.class);
+        Computer computer = new Computer(calculatorMock);
+
+        when(calculatorMock.add(8,11)).thenReturn(19);
+
+        int result = computer.compute("addition",8, 11);
+
+        assertEquals(19,result);
+
+        verify(calculatorMock).add(8, 11);
         // 1. Create Computer object to use as test object.
         // 2. Make sure Calculator is mocked to enable stubbing of output.
         // 3. Stub CalculatorMock to output correct value when add()-method is called.
