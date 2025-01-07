@@ -29,6 +29,16 @@ public class TestComputer {
 
     @Test
     public void threeTimesSixEqualsEighteen() {
+        Calculator calculatorMock = mock(Calculator.class);
+        Computer computer = new Computer(calculatorMock);
+
+        when(calculatorMock.multiply(3, 6)).thenReturn(18);
+
+        int result = computer.compute("multiplication",3, 6);
+
+        assertEquals(18,result);
+
+        verify(calculatorMock).multiply(3, 6);
         // 1. Create Computer object to use as test object.
         // 2. Make sure Calculator is mocked to enable stubbing of output.
         // 3. Stub CalculatorMock to output correct value when multiply()-method is called.
