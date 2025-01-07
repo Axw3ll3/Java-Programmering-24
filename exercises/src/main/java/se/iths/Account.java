@@ -1,10 +1,15 @@
 package se.iths;
 
+import java.util.Scanner;
+
 public class Account {
     private int saldo;
+    private int amount;
+    Scanner scanner = new Scanner(System.in);
 
-    public Account(int saldo) {
-        saldo = 100;
+    public Account() {
+        this.saldo = 100;
+        this.amount = 50;
     }
 
     public int WithdrawMoney(int amount) {
