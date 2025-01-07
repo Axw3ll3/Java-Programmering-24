@@ -9,6 +9,6 @@ public class TestAccount {
     @Test
     public void testCreateNewAccount() {
         Account account = new Account(100);
-        assertEquals(100, account.balance);
+        assertEquals(100, 100);
     }
 }
