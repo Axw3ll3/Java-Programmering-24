@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>se.iths</groupId>
-    <artifactId>exercises</artifactId>
+    <artifactId>Maven_project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
